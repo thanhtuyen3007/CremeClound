@@ -7,13 +7,13 @@ interface ProductGridProps {
 
 const ProductGrid = ({products} : ProductGridProps) => {
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-6 mx-4" > 
+    
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-x-6 mx-4" > 
         {products.map((product) => {
           return <ProductCard key={product.id} product={product} />;
         })}
      </div>
-    </div>
+    
   )
 }
 
